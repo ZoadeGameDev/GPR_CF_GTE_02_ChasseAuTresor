@@ -2,6 +2,7 @@
 
 #include "Messages.hpp"
 #include "Treasure.hpp"
+#include "GameConfig.hpp"
 
 void playGame()
 {
@@ -14,7 +15,7 @@ void playGame()
     bool found = false;
     bool gaveUp = false;
 
-    while (!found && !gaveUp)
+    while (!found && !gaveUp && attempts < MAX_ATTEMPTS)
     {
         const int column = askColumn();
         if (column == 0)
